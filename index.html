@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--BOXICONS-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!--STYLE-->
+    <link rel="stylesheet" href="/styles/style.css" />
+
+    <title>Todo app</title>
+  </head>
+  <body>
+    <!--TO DO-->
+    <section class="section-todo">
+      <div class="container">
+        <div class="todo-wrapper">
+          <div class="todo-header">
+            <h1 class="todo-title">todo</h1>
+            <button class="toggle-theme"></button>
+          </div>
+          <div class="add-todo wrapper">
+            <button class="add-task-btn" id="add-task-btn "></button>
+
+            <input
+              class="create-input"
+              type="text"
+              id="description-task"
+              placeholder="Create a new todo..."
+            />
+          </div>
+          <div class="dotos__wrapper"></div>
+
+          <nav class="nav-todos wrapper">
+            <ul class="nav-links">
+              <li class="nav-item active" data-id="all">All</li>
+              <li class="nav-item" data-id="active">Active</li>
+              <li class="nav-item" data-id="completed">Completed</li>
+            </ul>
+          </nav>
+
+          <div class="reorder">
+            <p>Drag and drop to reorder list</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

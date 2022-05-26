@@ -1,0 +1,452 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,700&family=Overpass:wght@300;600&family=Poppins:wght@500;600&display=swap');
+
+@import url('/styles/adaptive.css');
+
+/*===== VARIABLES CSS =====*/
+:root {
+  /*========== Colors ==========*/
+  --blue-100: hsl(220, 98%, 61%);
+  --btn-gradient: linear-gradient(80deg, rgb(87, 221, 255), rgb(192, 88, 243));
+  --title: hsl(0, 0%, 100%);
+  --icon: hsl(0, 0%, 100%);
+
+  /*========== LIGHT THEME =====*/
+
+  --bg-wrapper: hsl(0, 0%, 98%);
+  --border: hsl(234, 39%, 85%);
+  --body-background-light: hsl(233, 11%, 84%);
+  --text: hsl(236, 9%, 61%);
+  --toggle-bg: url(/images/icon-moon.svg);
+  --img-background: url(../images/bg-desktop-light.jpg);
+
+  /*========== Font weight ==========*/
+  --font-normal: 400;
+  --font-semi-bold: 700;
+
+  /*===== TEXT =====*/
+}
+
+/*========== DARK THEME =====*/
+:root[data-theme='dark'] {
+  --body-background-light: hsl(235, 21%, 11%);
+  --bg-wrapper: hsl(235, 24%, 19%);
+  --border: hsl(233, 14%, 35%);
+  --toggle-bg: url(/images/icon-sun.svg);
+  --img-background: url(../images/bg-desktop-dark.jpg);
+  --text: hsl(233, 14%, 35%);
+}
+/*========== BASE ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+input {
+  outline: none;
+}
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========== CLASS CSS ==========*/
+
+body {
+  background-image: var(--img-background);
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-color: var(--body-background-light);
+  color: var(--text);
+  transition: 1s;
+}
+
+/*========== DARK THEME  ==========*/
+
+/*========== HEADER TODO  ==========*/
+.section-todo {
+  padding: 70px 0;
+}
+
+.todo-wrapper {
+  max-width: 650px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-content: center;
+  margin-bottom: 2rem;
+}
+
+.todo-title {
+  text-transform: uppercase;
+  color: var(--title);
+  font-size: 2.5rem;
+  letter-spacing: 0.8rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.toggle-theme {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: var(--toggle-bg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  right: 0;
+  top: 0px;
+  cursor: pointer;
+
+  transition: 0.1 ease-in-out;
+}
+.material-symbols-outlined {
+  color: var(--icon);
+  font-size: 2.8rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+/*========== CREATE TODO  ==========*/
+
+.wrapper {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-wrapper);
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.1);
+  padding: 1.8rem;
+  border-radius: 0.45rem;
+  margin-bottom: 0.3rem;
+  transition: 1s;
+}
+
+.add-todo {
+  justify-content: flex-start;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+input[type='text'] {
+  word-break: break-all;
+}
+.create-input {
+  outline: none;
+  border: none;
+  width: 80%;
+  background-color: transparent;
+  font-size: 1.3rem;
+  white-space: pre-wrap;
+  color: var(--text);
+}
+
+/*========== ADD BTN TODOS  =====*/
+.add-task-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2.8px solid var(--border);
+  background-color: transparent;
+  position: relative;
+  margin-right: 25px;
+  transition: color 0.4s ease-in-out;
+}
+/* .add-task-btn:after {
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  color: var(--border);
+  background: url(/images/icon-check.svg) no-repeat;
+
+  background-size: 20px 20px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  z-index: 2;
+} */
+
+.add-task-btn:hover {
+  background-image: var(--btn-gradient);
+}
+
+/*========== CREATED TODOS  ==========*/
+
+.todos__item.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.todos__item.delition {
+  animation: opacity 1s ease-in-out;
+}
+.description {
+  width: 80%;
+  font-size: 1.3rem;
+  word-break: break-all;
+}
+
+.todos__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+/*========== CHECKBOX COMPLETE===============*/
+
+.checkbox-comlete {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+.btn-complete {
+  display: none;
+  position: absolute;
+}
+.checkbox-label {
+  cursor: pointer;
+}
+.checkbox-label:before {
+  content: '';
+  display: block;
+  height: 35px;
+  width: 35px;
+  border: 2.8px solid var(--border);
+  border-radius: 50%;
+  text-align: center;
+  transition: color ease 0.3s;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* transition: background 0.1s; */
+}
+.checkbox-label:after {
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: url(/images/icon-check.svg) no-repeat;
+  background-size: 20px 20px;
+  opacity: 0;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  z-index: 2;
+}
+.btn-complete:checked + .checkbox-label:before {
+  background-image: var(--btn-gradient);
+}
+.btn-complete:checked + .checkbox-label:after {
+  opacity: 1;
+}
+
+.btn-delete {
+  border: none;
+  background-color: transparent;
+}
+
+.close {
+  color: var(--border);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*========== NAVIGATION ===============*/
+.nav-todos {
+  position: relative;
+  top: 20px;
+}
+
+.nav-links {
+  display: flex;
+}
+.nav-links li {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.nav-todos {
+  font-weight: var(--font-semi-bold);
+  color: var(--text-light-theme);
+}
+.nav-todos li.active {
+  color: var(--blue-100);
+}
+
+p {
+  position: relative;
+  top: 400px;
+  left: 0;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    background-size: unset;
+  }
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  .todo-wrapper {
+    width: 500px;
+    margin-bottom: 1rem;
+  }
+
+  .todo-title {
+    font-size: 2rem;
+  }
+
+  .wrapper {
+    width: 500px;
+    padding: 1.4rem;
+  }
+  .toggle-theme {
+    width: 27px;
+    height: 27px;
+  }
+  .material-symbols-outlined {
+    font-size: 2rem;
+  }
+  .create-input {
+    font-size: 1.2rem;
+  }
+  .add-task-btn {
+    width: 28px;
+    height: 28px;
+    border: 2.4px solid var(--border);
+  }
+  .description {
+    font-size: 1.2rem;
+  }
+  .checkbox-comlete {
+    width: 28px;
+    height: 28px;
+  }
+  .checkbox-label:before {
+    width: 25px;
+    height: 25px;
+    border: 2.4px solid var(--border);
+  }
+  .checkbox-label:after {
+    height: 15px;
+    width: 15px;
+    background-size: 15px 15px;
+    top: 7px;
+    left: 7px;
+  }
+  .nav-links li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 550px;
+  }
+  .todo-wrapper {
+    width: 400px;
+    margin-bottom: 1rem;
+  }
+  .todo-header {
+    margin-bottom: 3rem;
+  }
+
+  .todo-title {
+    font-size: 1.7rem;
+  }
+
+  .wrapper {
+    width: 400px;
+    padding: 1.4rem;
+  }
+  .toggle-theme {
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: 0px;
+  }
+  .material-symbols-outlined {
+    font-size: 1.2rem;
+  }
+  .create-input {
+    font-size: 1rem;
+  }
+  .add-task-btn {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--border);
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .checkbox-comlete {
+    width: 23px;
+    height: 23px;
+  }
+  .checkbox-label:before {
+    width: 23px;
+    height: 23px;
+    border: 2px solid var(--border);
+  }
+  .checkbox-label:after {
+    height: 12px;
+    width: 12px;
+    background-size: 15px 15px;
+    top: 6px;
+    left: 6px;
+  }
+  .btn-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .nav-links li {
+    font-size: 0.8rem;
+  }
+}

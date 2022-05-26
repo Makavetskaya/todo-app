@@ -30,8 +30,8 @@
   --body-background-light: hsl(235, 21%, 11%);
   --bg-wrapper: hsl(235, 24%, 19%);
   --border: hsl(233, 14%, 35%);
-  --toggle-bg: url(/images/icon-sun.svg);
-  --img-background: url(../images/bg-desktop-dark.jpg);
+  --toggle-bg: url(./images/icon-sun.svg);
+  --img-background: url(./images/bg-desktop-dark.jpg);
   --text: hsl(233, 14%, 35%);
 }
 /*========== BASE ==========*/
@@ -253,7 +253,7 @@ input[type='text'] {
   display: block;
   height: 20px;
   width: 20px;
-  background: url(/images/icon-check.svg) no-repeat;
+  background: url(./images/icon-check.svg) no-repeat;
   background-size: 20px 20px;
   opacity: 0;
   position: absolute;

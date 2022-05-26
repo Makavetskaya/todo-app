@@ -448,3 +448,76 @@ p {
     font-size: 0.8rem;
   }
 }
+@media (max-width: 480px) {
+  .container {
+    max-width: 400px;
+  }
+  .todo-wrapper {
+    width: 300px;
+    margin-bottom: 0.5rem;
+  }
+  .todo-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .todo-title {
+    font-size: 1.4rem;
+  }
+
+  .wrapper {
+    width: 300px;
+    padding: 1.1rem;
+  }
+  .toggle-theme {
+    width: 25px;
+    height: 25px;
+    right: 0;
+    top: 0px;
+  }
+  .material-symbols-outlined {
+    font-size: 1.5rem;
+  }
+  .create-input {
+    font-size: 0.9rem;
+  }
+
+  .add-todo {
+    margin-bottom: 2rem;
+  }
+  .add-task-btn {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--border);
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+  .checkbox-comlete {
+    width: 20px;
+    height: 20px;
+  }
+  .checkbox-label:before {
+    width: 20px;
+    height: 20px;
+    border: 1.2px solid var(--border);
+  }
+  .checkbox-label:after {
+    height: 12px;
+    width: 12px;
+    background-size: 15px 15px;
+    top: 4px;
+    left: 4px;
+  }
+  .btn-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .nav-links li {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 320px) {
+}

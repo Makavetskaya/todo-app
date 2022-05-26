@@ -15,8 +15,8 @@
   --border: hsl(234, 39%, 85%);
   --body-background-light: hsl(233, 11%, 84%);
   --text: hsl(236, 9%, 61%);
-  --toggle-bg: url(./images/icon-moon.svg);
-  --img-background: url(./images/bg-desktop-light.jpg);
+  --toggle-bg: url(images/icon-moon.svg);
+  --img-background: url(images/bg-desktop-light.jpg);
 
   /*========== Font weight ==========*/
   --font-normal: 400;
@@ -30,8 +30,8 @@
   --body-background-light: hsl(235, 21%, 11%);
   --bg-wrapper: hsl(235, 24%, 19%);
   --border: hsl(233, 14%, 35%);
-  --toggle-bg: url(./images/icon-sun.svg);
-  --img-background: url(./images/bg-desktop-dark.jpg);
+  --toggle-bg: url(images/icon-sun.svg);
+  --img-background: url(images/bg-desktop-dark.jpg);
   --text: hsl(233, 14%, 35%);
 }
 /*========== BASE ==========*/

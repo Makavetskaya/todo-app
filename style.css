@@ -174,6 +174,7 @@ body {
   position: relative;
   margin-right: 25px;
   transition: color 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 /*========== CREATED TODOS  ==========*/
@@ -257,7 +258,7 @@ body {
 .close {
   color: var(--border);
   position: absolute;
-  top: 0;
+  top: -5px;
   right: 0;
 }
 
@@ -496,7 +497,7 @@ p {
   }
 
   .nav-links li {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 

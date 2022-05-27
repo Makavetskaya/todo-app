@@ -151,9 +151,6 @@ body {
   position: relative;
 }
 
-input[type='text'] {
-  word-break: break-all;
-}
 .create-input {
   outline: none;
   border: none;
@@ -161,9 +158,12 @@ input[type='text'] {
   background-color: transparent;
   font-size: 1.3rem;
   white-space: pre-wrap;
-  color: var(--text);
+  color: var(--border);
 }
-
+.create-input::placeholder {
+  color: var(--text);
+  font-weight: var(--font-normal);
+}
 /*========== ADD BTN TODOS  =====*/
 .add-task-btn {
   width: 35px;
@@ -174,24 +174,6 @@ input[type='text'] {
   position: relative;
   margin-right: 25px;
   transition: color 0.4s ease-in-out;
-}
-/* .add-task-btn:after {
-  content: '';
-  display: block;
-  height: 20px;
-  width: 20px;
-  color: var(--border);
-  background: url(/images/icon-check.svg) no-repeat;
-
-  background-size: 20px 20px;
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  z-index: 2;
-} */
-
-.add-task-btn:hover {
-  background-image: var(--btn-gradient);
 }
 
 /*========== CREATED TODOS  ==========*/
@@ -246,7 +228,6 @@ input[type='text'] {
   top: 0;
   left: 0;
   z-index: 1;
-  /* transition: background 0.1s; */
 }
 .checkbox-label:after {
   content: '';
@@ -296,8 +277,8 @@ input[type='text'] {
 }
 
 .nav-todos {
-  font-weight: var(--font-semi-bold);
-  color: var(--text-light-theme);
+  font-weight: var(--font-normal);
+  color: var(--text);
 }
 .nav-todos li.active {
   color: var(--blue-100);

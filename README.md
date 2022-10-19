@@ -1,6 +1,7 @@
 # todo-app
 
 https://makavetskaya.github.io/todo-app/
+
 The classic todo app with a few twists!
 Your users have the ability to:
 
